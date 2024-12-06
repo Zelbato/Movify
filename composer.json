@@ -1,0 +1,15 @@
+{
+    "name": "heito/movify",
+    "autoload": {
+        "psr-4": {
+            "Heito\\Movify\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Heitor Zelbato",
+            "email": "heitorzelbato@gmail.com"
+        }
+    ],
+    "require": {}
+}

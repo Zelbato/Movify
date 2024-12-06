@@ -1,0 +1,18 @@
+
+
+header .home-header {
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+header .home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 600;
+    color: red;
+}
