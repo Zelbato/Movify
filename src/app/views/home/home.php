@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+require '../../../../config.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -36,6 +43,26 @@
         <div class="poster-container">
             <div class="poster-filme"></div>
 
+            <div class="filme-mobile">
+
+                <div class="card-filme">
+                    <div class="card-filme-header">
+
+                        <div class="card-img"></div>
+
+                        <p class="genero-filme">Ação, aventura</p>
+
+                        <div class="btn-links">
+                            <a href="https://youtu.be/-bcjtApoUyU?si=Xy4xF7rLJBx8dpzg" class="btn btn-primary"><i class="fa-solid fa-play"></i>Assistir</a>
+
+                            <a href="filmes.php" class="btn btn-secundary"><i class="fa-solid fa-circle-info"></i> Mais Imformações</a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
             <div class="filme">
                 <div class="title">
                     <h1>Sonic 3 - O Filme</h1>
@@ -47,9 +74,9 @@
                 </div>
 
                 <div class="btn-links">
-                    <a href="#" class="btn btn-primary"><i class="fa-solid fa-play"></i>Assistir</a>
+                    <a href="https://youtu.be/-bcjtApoUyU?si=Xy4xF7rLJBx8dpzg" class="btn btn-primary"><i class="fa-solid fa-play"></i>Assistir</a>
 
-                    <button class="btn btn-secundary"><i class="fa-solid fa-circle-info"></i> Mais Imformações</button>
+                    <a href="filmes.php" class="btn btn-secundary"><i class="fa-solid fa-circle-info"></i> Mais Imformações</a>
                 </div>
             </div>
 

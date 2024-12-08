@@ -24,7 +24,7 @@
     flex-direction: column;
     width: 100%;
     height: auto;
-    background: rgb(0, 0, 0); /* rgb( 25, 25, 25 )*/
+    background: rgb(0, 0, 0); /* rgb( 25, 25, 25 ) */
     z-index: 5;
 }
 
@@ -36,9 +36,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: .5;
+    opacity: 0.4;
     z-index: 1;
-
 }
 
 .filme {
@@ -80,7 +79,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px ;
+        padding: 20px;
 
         .btn {
             width: 100%;
@@ -90,7 +89,7 @@
             border: none;
             border-radius: 5px;
             margin: 0 20px;
-            transition: all .2s;
+            transition: all 0.2s;
         }
 
         .btn-primary {
@@ -101,15 +100,14 @@
             font-size: 20px;
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
-            
 
             &:hover {
-                background-color: #f3f6f9d0;
+                background-color: #d6d9db;
                 color: rgb(25, 25, 25);
             }
         }
 
-        button.btn-secundary {
+        .btn-secundary {
             width: 250px;
             height: auto;
             background: rgba(128, 128, 128, 0.737);
@@ -130,3 +128,192 @@
         }
     }
 }
+
+.filme-mobile {
+    display: none;
+}
+
+/* ============================= */
+/* Responsividade */
+/* ============================= */
+
+/* Tablets (largura máxima de 768px) */
+@media screen and (max-width: 768px) {
+    .poster-container {
+        width: 100%;
+        height: 100vh;
+    }
+    .poster-filme {
+        height: 100vh;
+    }
+
+    .filme {
+        .title h1 {
+            font-size: 2rem;
+            padding: 10% 20px 10px;
+        }
+
+        .description {
+            font-size: 1rem;
+            width: 70%;
+        }
+
+        .btn-links {
+            flex-direction: column;
+            gap: 15px;
+
+            .btn-primary,
+            .btn-secundary {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* Celulares (largura máxima de 480px) */
+@media screen and (max-width: 480px) {
+    .poster-container {
+        width: 100%;
+        height: 80vh;
+    }
+
+    .poster-filme {
+        height: 100vh;
+        filter: blur(100px); /* Define o nível de desfoque */
+    }
+
+    .filme {
+        display: none;
+    }
+
+    .filme-mobile {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 80vh;
+
+
+        .card-filme {
+            width: 90%;
+            height: 80%;
+            background-image: url("../../img/Sonic-3-poster-mobile.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 10% auto;
+            padding: 10% 20px 10px;
+            border-radius: 10px;
+            border: 1px solid #f3f6f933;
+            box-shadow: 0 0 10px rgba(0, 0, 0 0.2);
+            opacity: 0.7;
+            z-index: 10;
+
+            .card-img {
+                width: 100%;
+                height: 75%;
+                border-radius: 10px 10px 0 0;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px 10px 0 0;
+                }
+            }
+
+            .btn-links {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 14% 0 0;
+                z-index: 30;
+
+                .btn {
+                    width: 100%;
+                    height: auto;
+                    text-align: center;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                    margin:0  5px ;
+                    transition: all 0.2s;
+                }
+
+                .btn-primary {
+                    width: 180px;
+                    background-color: #f3f6f9;
+                    color: rgb(25, 25, 25);
+                    text-decoration: none;
+                    font-size: 12px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: bold;
+
+                    &:hover {
+                        background-color: #d6d9db;
+                        color: rgb(25, 25, 25);
+                    }
+                }
+
+                .btn-secundary {
+                    width: 250px;
+                    height: auto;
+                    background: rgba(128, 128, 128, 0.737);
+                    color: #f3f6f9;
+                    text-decoration: none;
+                    font-size: 12px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: bold;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: rgba(128, 128, 128, 0.419);
+                    }
+                }
+
+                i {
+                    font-size: 12px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+// .poster-container {
+//     position: relative;
+//     width: 100%;
+//     height: 80vh;
+//     background: var(--background);
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+// }
+
+// .poster-filme {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     z-index: 1;
+//     opacity: 0.5;
+// }
+
+// .filme {
+//     position: relative;
+//     z-index: 10;
+//     text-align: center;
+// }
+
+// .swiper-container {
+//     width: 100%;
+//     height: 100vh;
+// }
+
+// .swiper-button-next,
+// .swiper-button-prev {
+//     color: #f3f6f9;
+// }
