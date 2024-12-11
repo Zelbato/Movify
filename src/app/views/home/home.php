@@ -77,17 +77,24 @@ require '../../../../config.php';
                     <a href="https://youtu.be/-bcjtApoUyU?si=Xy4xF7rLJBx8dpzg" class="btn btn-primary"><i class="fa-solid fa-play"></i>Assistir</a>
 
                     <a href="filmes.php" class="btn btn-secundary"><i class="fa-solid fa-circle-info"></i> Mais Imformações</a>
+
                 </div>
+
             </div>
 
-
         </div>
+
+        <section class="cardFilmes">
+
+        <h1>Cards</h1>
+
+        </section>
     </main>
 
     <?php require '../partials/footer.php'; ?> <!-- Chamada do footer -->
 
 </body>
 
-<script src="/public/assets/js/main.js"></script>
+<script src="../../../public/assets/js/main.js"></script>
 
 </html>
