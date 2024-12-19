@@ -85,10 +85,75 @@ require '../../../../config.php';
         </div>
 
         <section class="cardFilmes">
+            <article class="container">
+                <aside class="slider-wrapper">
+                    <h1>Em Cartaz</h1>
+                    <button id="prev-slide" class="slide-button material-symbols-rounded">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    </button>
 
-        <h1>Cards</h1>
+                    <ul class="image-list">
+                        <li class="slide active">
+                            <a href="filmes.php">
+                                <img class="image-item" src="../../../public/assets/img/Sonic-3-poster-mobile.webp" alt="img-1" />
+                            </a>
+                        </li>
 
+                        <li class="slide">
+                            <a href="filmes.php">
+                                <img class="image-item" src="../../../public/assets/img/Sonic-3-poster-mobile.webp" alt="img-2" />
+                            </a>
+                        </li>
+
+                        <li class="slide">
+                            <a href="filmes.php">
+                                <img class="image-item" src="../../../public/assets/img/Sonic-3-poster-mobile.webp" alt="img-2" />
+                            </a>
+                        </li>
+
+                        <li class="slide">
+                            <a href="filmes.php">
+                                <img class="image-item" src="../../../public/assets/img/Sonic-3-poster-mobile.webp" alt="img-2" />
+                            </a>
+                        </li>
+
+                        <li class="slide">
+                            <a href="filmes.php">
+                                <img class="image-item" src="../../../public/assets/img/Sonic-3-poster-mobile.webp" alt="img-2" />
+                            </a>
+                        </li>
+
+                        <li class="slide">
+                            <a href="filmes.php">
+                                <img class="image-item" src="../../../public/assets/img/Sonic-3-poster-mobile.webp" alt="img-2" />
+                            </a>
+                        </li>
+
+                        <li class="slide">
+                            <a href="filmes.php">
+                                <img class="image-item" src="../../../public/assets/img/Sonic-3-poster-mobile.webp" alt="img-2" />
+                            </a>
+                        </li>
+
+                        <li class="slide">
+                            <a href="filmes.php">
+                                <img class="image-item" src="../../../public/assets/img/Sonic-3-poster-mobile.webp" alt="img-2" />
+                            </a>
+                        </li>
+
+                    </ul>
+                    <button id="next-slide" class="slide-button material-symbols-rounded">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </aside>
+                <aside class="slider-scrollbar">
+                    <div class="scrollbar-track">
+                        <div class="scrollbar-thumb"></div>
+                    </div>
+                </aside>
+            </article>
         </section>
+
     </main>
 
     <?php require '../partials/footer.php'; ?> <!-- Chamada do footer -->

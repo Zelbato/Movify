@@ -286,44 +286,169 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 80vh;
+    height: auto;
+    padding: 40px 20px;
     background: rgb(25, 25, 25);
     color: #f3f6f9;
+
+    /*Slide de Filems*/
+
+    .container {
+        max-width: 1300px;
+        width: 100%;
+        margin: 0 auto;
+
+        .slider-wrapper {
+            position: relative;
+            margin: 10px;
+
+            h1 {
+                font-size: 24px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: #f3f6f9;
+            }
+
+            /*Botão LEFT e RIGHT*/
+            .slide-button {
+                position: absolute;
+                top: 50%;
+                outline: none;
+                border: none;
+                height: 50px;
+                margin-right: 32px;
+                width: 50px;
+                z-index: 1;
+                color: rgb(0, 119, 255);
+                display: flex;
+                cursor: pointer;
+                font-size: 1.8rem;
+                background: transparent;
+                align-items: center;
+                justify-content: center;
+                border-radius: 25%;
+                border: 3px solid rgb(0, 119, 255);
+                transform: translateY(-50%);
+                transition: all 0.3s;
+
+                &:hover {
+                    background: transparent;
+                }
+            }
+
+            .slide-button#prev-slide {
+                left: -25px;
+                display: none;
+            }
+
+            .slide-button#next-slide {
+                right: -50px;
+            }
+
+            .image-list {
+                display: grid;
+                grid-template-columns: repeat(10, 1fr);
+                gap: 20px;
+                font-size: 0;
+                list-style: none;
+                overflow-x: auto;
+                scrollbar-width: none;
+            }
+
+            .image-list::-webkit-scrollbar {
+                display: none;
+            }
+
+            .image-item {
+                width: 225px;
+                height: 350px;
+                object-fit: contain;
+                opacity: 0.4;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                } 
+
+                &:hover {
+                    transition: all .1s;
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        .slider-scrollbar {
+            height: 24px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            /*Parte branca do botao*/
+            .scrollbar-track {
+                background: #ffffff;
+                width: 100%;
+                height: 2px;
+                display: flex;
+                align-items: center;
+                border-radius: 4px;
+                position: relative;
+            }
+
+            /*Botão rasteira amarelo*/
+            .scrollbar-thumb {
+                position: absolute;
+                background: #ffbc04;
+                top: 0;
+                bottom: 0;
+                width: 18%;
+                height: 100%;
+                cursor: grab;
+                border-radius: inherit;
+
+                &:active {
+                    cursor: grabbing;
+                    height: 8px;
+                    top: -2px;
+                }
+
+                &::after {
+                    content: "";
+                    position: relative;
+                    left: 0;
+                    right: 0;
+                    top: -10px;
+                    bottom: -10px;
+                }
+            }
+        }
+    }
 }
-// .poster-container {
-//     position: relative;
-//     width: 100%;
-//     height: 80vh;
-//     background: var(--background);
-//     background-size: cover;
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex-direction: column;
-// }
 
-// .poster-filme {
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//     z-index: 1;
-//     opacity: 0.5;
-// }
+/* ============================= */
+/* Responsividade */
+/* ============================= */
 
-// .filme {
-//     position: relative;
-//     z-index: 10;
-//     text-align: center;
-// }
+// Estilos para Telas Muito Pequenas (Ex.: 480px ou menos)
+@media (max-width: 480px) {
+    .cardFilmes {
+        width: 100%;
+        background: rgb(25, 25, 25);
+    }
 
-// .swiper-container {
-//     width: 100%;
-//     height: 100vh;
-// }
+    .container {
+      .slider-wrapper {
+        h1 {
+          font-size: 16px;
+        }
 
-// .swiper-button-next,
-// .swiper-button-prev {
-//     color: #f3f6f9;
-// }
+        .image-list {
+          grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+          gap: 6px;
+        }
+
+        .image-item {
+          width: 80px;
+          height: 120px;
+        }
+      }
+    }
+  }
