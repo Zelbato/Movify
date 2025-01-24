@@ -89,7 +89,7 @@ require '../../../../config.php';
                 <aside class="slider-wrapper">
                     <h1>Em Cartaz</h1>
                     <button id="prev-slide" class="slide-button material-symbols-rounded">
-                    <i class="fa-solid fa-arrow-left"></i>
+                        <img src="../../../public/assets/img/seta-esquerda.png" alt="image-seta-esquerda">
                     </button>
 
                     <ul class="image-list">
@@ -143,7 +143,7 @@ require '../../../../config.php';
 
                     </ul>
                     <button id="next-slide" class="slide-button material-symbols-rounded">
-                    <i class="fa-solid fa-arrow-right"></i>
+                        <img src="../../../public/assets/img/seta-direita.png" alt="image-seta-direita">
                     </button>
                 </aside>
                 <aside class="slider-scrollbar">

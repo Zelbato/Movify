@@ -325,13 +325,18 @@
                 background: transparent;
                 align-items: center;
                 justify-content: center;
-                border-radius: 25%;
-                border: 3px solid rgb(0, 119, 255);
                 transform: translateY(-50%);
                 transition: all 0.3s;
 
                 &:hover {
                     background: transparent;
+                }
+
+                img {
+                    width: 100%;
+                    max-width: 30px;
+                    height: 30px;
+                    object-fit: cover;
                 }
             }
 
